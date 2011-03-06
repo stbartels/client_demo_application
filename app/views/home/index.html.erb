@@ -1,0 +1,33 @@
+<h1>View All Clients</h1>
+
+<table style="width: 100%;" cellpadding="10">
+	<tr>
+		<th>Name</th>
+		<th>Address</th>
+		<th>County</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip Code</th>
+		<th>Phone Number</th>
+		<th>Cell Phone Number</th>
+		<th>Fax Number</th>
+		<th>Email Address</th>
+	</tr>
+	<% @clients.each do |client| %>
+		<tr>
+			<td><%= client.client_name %></td>
+			<td><%= client.address %></td>
+			<td><%= client.county %></td>
+			<td><%= client.city %></td>
+			<td><%= client.state %></td>
+			<td><%= client.zip_code %></td>
+			<td><%= client.phone_number %></td>
+			<td><%= client.cell_phone_number %></td>
+			<td><%= client.fax_number %></td>
+			<td><%= client.email_address %></td>
+		</tr>
+		<tr>
+			<td colspan="10"><hr /></td>
+		</tr>
+	<% end %>
+</table>
